@@ -8,11 +8,9 @@ connection {
     user = "ubuntu"
     private_key = file("./JEN.pem")
     host = self.public_ip
-    timeout = "10m"
     }
 provisioner "remote-exec" {
-    inline = ["echo 'wait to start the instance' ",
-    "sleep 60" ]
+    inline = ["echo 'wait to start the instance' "]
 }
 tags = {
     Name = "test-server"
