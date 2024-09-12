@@ -9,7 +9,7 @@ connection {
     private_key = file("./JEN.pem")
     host = self.public_ip
     }
-provisioner "local-exec" {
+provisioner "remote-exec" {
     inline = ["echo 'wait to start the instance' "]
 }
 tags = {
